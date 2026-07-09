@@ -38,22 +38,22 @@ function displayWords(words) {
 
   words.forEach(word => {
 
-    wordList.innerHTML += `
+   wordList.innerHTML += `
 
-      <div class="card" style="margin-bottom:20px;">
+<div class="word-card">
 
-        <h1>${word.japanese}</h1>
+<h2>${word.japanese}</h2>
 
-        <h3>${word.reading}</h3>
+<h3>${word.reading}</h3>
 
-        <p><strong>Meaning:</strong> ${word.meaning}</p>
+<p><strong>Meaning:</strong> ${word.meaning}</p>
 
-        <p><strong>Type:</strong> ${word.type}</p>
+<div class="badge">${word.type}</div>
 
-      </div>
+</div>
 
-    `;
-
+`;
+    
   });
 
 }
