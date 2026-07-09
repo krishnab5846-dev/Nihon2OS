@@ -58,8 +58,7 @@ const n5Words = [
     reading: "ともだち",
     meaning: "Friend",
     type: "Noun"
-  }
-  ,
+  },
 {
   japanese: "車",
   reading: "くるま",
