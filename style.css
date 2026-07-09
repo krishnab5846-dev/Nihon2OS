@@ -164,3 +164,13 @@ font-size:48px;
 }
 
 }
+.sidebar a{
+  color:white;
+  text-decoration:none;
+  display:block;
+  width:100%;
+}
+
+.sidebar a:hover{
+  color:white;
+}
