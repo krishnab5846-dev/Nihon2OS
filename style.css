@@ -29,16 +29,26 @@ body {
 }
 
 .sidebar li {
-  padding: 14px;
+  list-style: none;
   margin-bottom: 10px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: .3s;
 }
 
-.sidebar li:hover,
-.sidebar .active {
+.sidebar li a {
+  display: block;
+  padding: 14px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar li a:hover {
   background: #4f46e5;
+}
+
+.sidebar li.active a {
+  background: #4f46e5;
+
 }
 
 .main {
