@@ -59,4 +59,35 @@ const n5Words = [
     meaning: "Friend",
     type: "Noun"
   }
+  ,
+{
+  japanese: "車",
+  reading: "くるま",
+  meaning: "Car",
+  type: "Noun"
+},
+{
+  japanese: "駅",
+  reading: "えき",
+  meaning: "Station",
+  type: "Noun"
+},
+{
+  japanese: "水",
+  reading: "みず",
+  meaning: "Water",
+  type: "Noun"
+},
+{
+  japanese: "火",
+  reading: "ひ",
+  meaning: "Fire",
+  type: "Noun"
+},
+{
+  japanese: "山",
+  reading: "やま",
+  meaning: "Mountain",
+  type: "Noun"
+}
 ];
