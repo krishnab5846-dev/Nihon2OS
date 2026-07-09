@@ -57,3 +57,15 @@ function displayWords(words) {
   });
 
 }
+function filterWords(type){
+
+if(type==="All"){
+displayWords(n5Words);
+return;
+}
+
+const filtered=n5Words.filter(word=>word.type===type);
+
+displayWords(filtered);
+
+}
