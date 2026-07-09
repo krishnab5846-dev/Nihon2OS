@@ -104,26 +104,3 @@ function displayWords(words) {
   });
 
 }
-function toggleFavourite(word){
-
-let favourites =
-JSON.parse(localStorage.getItem("favorites")) || [];
-
-if(favourites.includes(word)){
-
-favourites = favourites.filter(w=>w!==word);
-
-}else{
-
-favourites.push(word);
-
-}
-
-localStorage.setItem(
-"favorites",
-JSON.stringify(favourites)
-);
-
-displayWords(currentWords);
-
-}
