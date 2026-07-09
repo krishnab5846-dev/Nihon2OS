@@ -62,17 +62,43 @@ function displayWords(words) {
 
   wordList.innerHTML = "";
 
+  const favourites =
+    JSON.parse(localStorage.getItem("favorites")) || [];
+
   words.forEach(word => {
 
+    const saved = favourites.includes(word.japanese);
+
     wordList.innerHTML += `
-      <div class="word-card">
+
+    <div class="word-card">
+
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+
         <h2>${word.japanese}</h2>
-        <h3>${word.reading}</h3>
 
-        <p><strong>Meaning:</strong> ${word.meaning}</p>
+        <button
+          onclick="toggleFavourite('${word.japanese}')"
+          style="
+          background:none;
+          border:none;
+          font-size:28px;
+          cursor:pointer;
+          padding:0;
+          ">
+          ${saved ? "❤️" : "🤍"}
+        </button>
 
-        <div class="badge">${word.type}</div>
       </div>
+
+      <h3>${word.reading}</h3>
+
+      <p><strong>Meaning:</strong> ${word.meaning}</p>
+
+      <div class="badge">${word.type}</div>
+
+    </div>
+
     `;
 
   });
