@@ -292,14 +292,27 @@ gap:20px;
 
 }
 .word-card h2{
-font-size:36px;
-margin-bottom:10px;
+
+    font-size:56px;
+
+    text-align:center;
+
+    margin:20px 0 8px;
+
+    font-weight:700;
+
 }
 
 .word-card h3{
-color:#94a3b8;
-margin-bottom:15px;
-font-weight:500;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    margin-bottom:25px;
+
+    font-weight:500;
+
 }
 
 .badge{
