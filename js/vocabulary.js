@@ -124,11 +124,19 @@ if (randomBtn) {
   showRandomWord();
 
 }
-
 function showRandomWord() {
 
-  const random =
-    n5Words[Math.floor(Math.random() * n5Words.length)];
+  let random;
+
+  do {
+    random = n5Words[Math.floor(Math.random() * n5Words.length)];
+  } while (
+    currentPracticeWord &&
+    random.japanese === currentPracticeWord.japanese &&
+    n5Words.length > 1
+  );
+
+  currentPracticeWord = random;
 
   document.getElementById("practiceJapanese").textContent =
     random.japanese;
@@ -137,21 +145,11 @@ function showRandomWord() {
     random.reading;
 
   document.getElementById("practiceMeaning").textContent =
-    random.meaning;
+    "••••••";
 
-}
-function showRandomWord() {
+  meaningVisible = false;
 
-  const random =
-    n5Words[Math.floor(Math.random() * n5Words.length)];
-
-  document.getElementById("practiceJapanese").textContent =
-    random.japanese;
-
-  document.getElementById("practiceReading").textContent =
-    random.reading;
-
-  document.getElementById("practiceMeaning").textContent =
-    random.meaning;
+  document.getElementById("showMeaningBtn").textContent =
+    "Show Meaning";
 
 }
