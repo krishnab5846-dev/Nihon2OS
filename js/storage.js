@@ -20,3 +20,26 @@ function toggleFavourite(word) {
 
   displayWords(currentWords);
 }
+function getLearnedWords() {
+  return JSON.parse(localStorage.getItem("learnedWords")) || [];
+}
+
+function saveLearnedWords(words) {
+  localStorage.setItem("learnedWords", JSON.stringify(words));
+}
+
+function toggleLearned(word) {
+
+  let learned = getLearnedWords();
+
+  if (learned.includes(word)) {
+    learned = learned.filter(w => w !== word);
+  } else {
+    learned.push(word);
+  }
+
+  saveLearnedWords(learned);
+
+  displayWords(currentWords);
+
+}
