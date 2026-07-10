@@ -265,3 +265,36 @@ width:0%;
 background:#22c55e;
 transition:.4s;
 }
+/* ---------- Random Practice ---------- */
+
+.practice-box{
+  background:#1e293b;
+  border:1px solid #334155;
+  border-radius:18px;
+  padding:30px;
+  margin-bottom:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.practice-box h1{
+  font-size:56px;
+  margin:15px 0;
+}
+
+.practice-box h3{
+  color:#94a3b8;
+  margin-bottom:12px;
+}
+
+.practice-box p{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+.practice-box button{
+  margin-top:0;
+  margin-bottom:10px;
+}
