@@ -305,12 +305,24 @@ transition:.4s;
 }
 .search-bar{
   width:100%;
-  padding:15px;
-  border:none;
+  padding:15px 18px;
   border-radius:12px;
+  border:1px solid #334155;
+  background:#1e293b;
+  color:white;
   font-size:16px;
-  margin-bottom:25px;
+  margin-bottom:20px;
   outline:none;
+  transition:.25s;
+}
+
+.search-bar::placeholder{
+  color:#94a3b8;
+}
+
+.search-bar:focus{
+  border-color:#4f46e5;
+  box-shadow:0 0 0 3px rgba(79,70,229,.25);
 }
 .practice-buttons{
     display:flex;
