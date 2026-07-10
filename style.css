@@ -329,3 +329,230 @@ transition:.4s;
     justify-content:center;
     flex-wrap:wrap;
 }
+/* ===========================
+   NIHON OS 2.0 - VOCABULARY
+=========================== */
+
+.top-section{
+    display:grid;
+    grid-template-columns:2fr 360px;
+    gap:25px;
+    align-items:start;
+    margin-bottom:30px;
+}
+
+.left-panel h2{
+    font-size:42px;
+    margin-bottom:8px;
+}
+
+.left-panel p{
+    color:#94a3b8;
+    margin-bottom:20px;
+}
+
+.progress-box{
+    background:linear-gradient(135deg,#312e81,#4f46e5);
+    padding:22px;
+    border-radius:18px;
+    border:none;
+    box-shadow:0 15px 35px rgba(79,70,229,.25);
+}
+
+.progress-top{
+    color:white;
+}
+
+.progress-bar{
+    margin-top:12px;
+    height:10px;
+    background:rgba(255,255,255,.25);
+}
+
+#progressFill{
+    background:#22c55e;
+}
+
+.practice-box{
+
+    background:linear-gradient(135deg,#7c3aed,#4f46e5);
+
+    border:none;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    color:white;
+
+    box-shadow:0 18px 40px rgba(124,58,237,.35);
+
+    position:sticky;
+
+    top:30px;
+
+}
+
+.practice-box h3{
+
+    color:white;
+
+    opacity:.9;
+
+}
+
+.practice-box h1{
+
+    font-size:56px;
+
+    margin:10px 0;
+
+}
+
+.practice-box p{
+
+    font-size:20px;
+
+    opacity:.95;
+
+    margin-bottom:20px;
+
+}
+
+.practice-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.practice-buttons button{
+
+    flex:1;
+
+    background:white;
+
+    color:#4f46e5;
+
+    font-weight:600;
+
+}
+
+.practice-buttons button:hover{
+
+    background:#f8fafc;
+
+}
+
+.search-bar{
+
+    background:#1e293b;
+
+    border:2px solid transparent;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.search-bar:focus{
+
+    border-color:#6366f1;
+
+    box-shadow:0 0 0 5px rgba(99,102,241,.18);
+
+}
+
+.filter-container{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.filter-btn{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    transition:.3s;
+
+}
+
+.filter-btn:hover{
+
+    background:#6366f1;
+
+}
+
+.word-card{
+
+    background:#1e293b;
+
+    border:none;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    transition:.3s;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+.word-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(79,70,229,.25);
+
+}
+
+.word-card h2{
+
+    font-size:44px;
+
+    text-align:center;
+
+}
+
+.word-card h3{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.badge{
+
+    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+
+}
+
+@media(max-width:1100px){
+
+.top-section{
+
+grid-template-columns:1fr;
+
+}
+
+.practice-box{
+
+position:relative;
+
+top:0;
+
+}
+
+}
