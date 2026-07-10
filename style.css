@@ -374,22 +374,12 @@ transition:.4s;
 }
 
 .practice-box{
-
-    background:linear-gradient(135deg,#7c3aed,#4f46e5);
-
-    border:none;
-
-    border-radius:22px;
-
-    padding:28px;
-
-    color:white;
-
-    box-shadow:0 18px 40px rgba(124,58,237,.35);
-
-    position:sticky;
-
-    top:30px;
+    height:320px;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
 
 }
 
