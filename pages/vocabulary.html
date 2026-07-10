@@ -15,106 +15,99 @@
 
 <body>
 
+<!-- Sidebar -->
 <div class="sidebar">
 
-<h1>🇯🇵 NihonOS</h1>
+  <h1>🇯🇵 NihonOS</h1>
 
-<ul>
-<li><a href="../index.html">🏠 Dashboard</a></li>
-<li class="active"><a href="vocabulary.html">📚 Vocabulary</a></li>
-<li>✍ Grammar</li>
-<li>🈶 Kanji</li>
-<li>🔤 Hiragana</li>
-<li>🔠 Katakana</li>
-<li>🧠 Flashcards</li>
-<li>🎧 Listening</li>
-<li>📝 Notes</li>
-<li>🤖 AI Tutor</li>
-</ul>
+  <ul>
+    <li><a href="../index.html">🏠 Dashboard</a></li>
+    <li class="active"><a href="vocabulary.html">📚 Vocabulary</a></li>
+    <li><a href="#">✍ Grammar</a></li>
+    <li><a href="#">🈶 Kanji</a></li>
+    <li><a href="#">🔤 Hiragana</a></li>
+    <li><a href="#">🔠 Katakana</a></li>
+    <li><a href="#">🧠 Flashcards</a></li>
+    <li><a href="#">🎧 Listening</a></li>
+    <li><a href="#">📝 Notes</a></li>
+    <li><a href="#">🤖 AI Tutor</a></li>
+  </ul>
 
 </div>
 
+<!-- Main Content -->
 <div class="main">
 
-<div class="top-section">
+  <!-- Top Section -->
+  <div class="top-section">
 
-  <div class="left-panel">
+    <!-- Left -->
+    <div class="left-panel">
 
-    <h2>📚 N5 Vocabulary</h2>
+      <h2>📚 N5 Vocabulary</h2>
+      <p>Browse your vocabulary collection.</p>
 
-    <p>Browse your vocabulary collection.</p>
+      <div class="progress-box">
 
-    <div class="progress-box">
+        <div class="progress-top">
+          <span id="progressText">0 / 0 Learned</span>
+          <span id="progressPercent">0%</span>
+        </div>
 
-      <div class="progress-top">
-        <span id="progressText">0 / 0 Learned</span>
-        <span id="progressPercent">0%</span>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+
       </div>
 
-      <div class="progress-bar">
-        <div id="progressFill"></div>
+    </div>
+
+    <!-- Right -->
+    <div class="practice-box">
+
+      <h3>🎲 Random Practice</h3>
+
+      <h1 id="practiceJapanese">食べる</h1>
+
+      <h3 id="practiceReading">たべる</h3>
+
+      <p id="practiceMeaning">••••••</p>
+
+      <div class="practice-buttons">
+
+        <button id="showMeaningBtn">Show</button>
+
+        <button id="randomBtn">Next</button>
+
       </div>
 
     </div>
 
   </div>
 
-  <div class="practice-box">
+  <!-- Search -->
+  <input
+    id="search"
+    type="text"
+    placeholder="🔍 Search Japanese or English..."
+    class="search-bar"
+  >
 
-    <h3>🎲 Random Practice</h3>
+  <!-- Filters -->
+  <div class="filter-container">
 
-    <h1 id="practiceJapanese">食べる</h1>
+    <button class="filter-btn" onclick="filterWords('All')">All</button>
 
-    <h3 id="practiceReading">たべる</h3>
+    <button class="filter-btn" onclick="filterWords('Verb')">Verb</button>
 
-    <p id="practiceMeaning">••••••</p>
+    <button class="filter-btn" onclick="filterWords('Noun')">Noun</button>
 
-    <div class="practice-buttons">
-
-      <button id="showMeaningBtn">Show</button>
-
-      <button id="randomBtn">Next</button>
-
-    </div>
+    <button class="filter-btn" onclick="filterWords('Adjective')">Adjective</button>
 
   </div>
 
-</div>
-<div class="practice-box">
-
-    <h3>🎲 Random Practice</h3>
-
-    <h1 id="practiceJapanese">食べる</h1>
-
-    <h3 id="practiceReading">たべる</h3>
-
-    <p id="practiceMeaning">To eat</p>
-
-    <div class="practice-buttons">
-        <button id="showMeaningBtn">Hide Meaning</button>
-        <button id="randomBtn">Next Random Word</button>
-    </div>
-
-</div>
-  
-<input
-id="search"
-type="text"
-placeholder="Search Japanese or English..."
-class="search-bar"
->
-<div style="display:flex;gap:10px;margin-bottom:25px;flex-wrap:wrap;">
-
-<button class="filter-btn" onclick="filterWords('All')">All</button>
-
-<button class="filter-btn" onclick="filterWords('Verb')">Verb</button>
-
-<button class="filter-btn" onclick="filterWords('Noun')">Noun</button>
-
-<button class="filter-btn" onclick="filterWords('Adjective')">Adjective</button>
-
-</div>
-<div id="wordList"></div>
+  <!-- Vocabulary Grid -->
+  <div id="wordList"></div>
 
 </div>
 
