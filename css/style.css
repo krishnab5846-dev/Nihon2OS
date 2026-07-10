@@ -1,65 +1,117 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ===========================================
+   NIHONOS v2
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --bg:#0f172a;
+    --bg2:#111827;
+
+    --card:#1e293b;
+    --cardHover:#243349;
+
+    --primary:#6366f1;
+    --secondary:#8b5cf6;
+
+    --green:#22c55e;
+    --red:#f43f5e;
+    --yellow:#f59e0b;
+
+    --text:#ffffff;
+    --muted:#94a3b8;
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:20px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
+
     font-family:'Poppins',sans-serif;
-    color:white;
-    display:flex;
+
+    color:var(--text);
+
     min-height:100vh;
+
+    display:flex;
 
     background:
     radial-gradient(circle at top right,
-    rgba(139,92,246,.15),
+    rgba(99,102,241,.18),
     transparent 30%),
 
     radial-gradient(circle at bottom left,
     rgba(16,185,129,.10),
     transparent 25%),
 
-    #0f172a;
+    var(--bg);
+
 }
+
+/* ================= Sidebar ================= */
 
 .sidebar{
+
     width:280px;
+
     min-height:100vh;
 
-    background:rgba(15,23,42,.85);
+    background:rgba(17,24,39,.88);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(18px);
 
-    border-right:1px solid rgba(255,255,255,.06);
+    border-right:1px solid var(--border);
 
-    padding:30px;
+    padding:30px 20px;
 
     position:sticky;
+
     top:0;
+
 }
 
-.sidebar h1{
+.logo{
 
-    font-size:34px;
-
-    margin-bottom:45px;
+    font-size:32px;
 
     font-weight:700;
 
-    letter-spacing:-1px;
+    margin-bottom:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
 
 }
 
-.sidebar ul {
-  list-style: none;
+.sidebar ul{
+
+    list-style:none;
+
 }
 
-.sidebar li {
-  list-style: none;
-  margin-bottom: 10px;
+.sidebar li{
+
+    margin-bottom:8px;
+
 }
 
-.sidebar li a{
+.sidebar a{
 
     display:flex;
 
@@ -67,577 +119,74 @@ body{
 
     gap:14px;
 
-    padding:16px 18px;
+    text-decoration:none;
+
+    color:#d5dbe7;
+
+    padding:15px 18px;
 
     border-radius:16px;
 
-    transition:.3s;
-
-    color:#cbd5e1;
+    transition:.25s;
 
     font-weight:500;
 
 }
 
-.sidebar li a:hover{
+.sidebar a:hover{
 
-    background:#1e293b;
+    background:#1f2b49;
+
+    transform:translateX(5px);
 
     color:white;
-
-    transform:translateX(6px);
 
 }
 
 .sidebar li.active a{
 
-    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
 
     color:white;
 
-    box-shadow:0 10px 25px rgba(99,102,241,.25);
+    box-shadow:0 12px 30px rgba(99,102,241,.25);
 
 }
 
-.main {
-  flex: 1;
-  padding: 40px;
-}
+/* ================= Main ================= */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-header h2 {
-  font-size: 40px;
-}
-
-header p {
-  color: #94a3b8;
-  margin-top: 8px;
-}
-
-.profile {
-  background: #4f46e5;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-weight: 600;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
-  margin-bottom: 35px;
-}
-
-.card {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 18px;
-  border: 1px solid #334155;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  color: #94a3b8;
-  margin-bottom: 15px;
-}
-
-.card h1 {
-  font-size: 42px;
-}
-
-.word {
-  background: #1e293b;
-  padding: 35px;
-  border-radius: 18px;
-  border: 1px solid #334155;
-}
-
-.word h2 {
-  margin-bottom: 25px;
-}
-
-.word h1 {
-  font-size: 64px;
-}
-
-.word h3 {
-  color: #94a3b8;
-  margin: 10px 0 25px;
-}
-
-.word p {
-  margin-top: 12px;
-  line-height: 1.8;
-}
-
-button{
-  background:#4f46e5;
-  color:white;
-  border:none;
-  padding:12px 22px;
-  border-radius:10px;
-  cursor:pointer;
-  font-size:15px;
-  font-weight:500;
-  transition:.25s ease;
-}
-
-button:hover{
-  background:#6366f1;
-  transform:translateY(-2px);
-}
-
-button:active{
-  transform:translateY(0);
-}
-
-@media (max-width:900px){
-
-body{
-display:block;
-}
-
-.sidebar{
-width:100%;
-min-height:auto;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-header{
-flex-direction:column;
-align-items:flex-start;
-gap:20px;
-}
-
-.word h1{
-font-size:48px;
-}
-
-}
-.sidebar a{
-  color:white;
-  text-decoration:none;
-  display:block;
-  width:100%;
-}
-
-.sidebar a:hover{
-  color:white;
-}
-
-#wordList{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-gap:20px;
-}
-
-.word-card{
-
-    background:#1e293b;
-
-    border-radius:22px;
-
-    padding:25px;
-
-    border:1px solid rgba(255,255,255,.05);
-
-    border-top:5px solid #8b5cf6;
-
-    transition:.3s;
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.word-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 25px 50px rgba(99,102,241,.20);
-
-}
-
-.word-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-40px;
-
-    right:-40px;
-
-    width:120px;
-
-    height:120px;
-
-    background:rgba(139,92,246,.08);
-
-    border-radius:50%;
-
-}
-.word-card h2{
-
-    font-size:56px;
-
-    text-align:center;
-
-    margin:20px 0 8px;
-
-    font-weight:700;
-
-}
-
-.word-card h3{
-
-    text-align:center;
-
-    color:#94a3b8;
-
-    margin-bottom:25px;
-
-    font-weight:500;
-
-}
-
-.badge{
-display:inline-block;
-background:#2563eb;
-padding:6px 12px;
-border-radius:30px;
-font-size:13px;
-margin-top:15px;
-}
-.filter-btn{
-  background:#1e293b;
-  border:1px solid #334155;
-  color:#e2e8f0;
-  padding:10px 18px;
-  border-radius:10px;
-  font-size:14px;
-}
-
-.filter-btn:hover{
-  background:#4f46e5;
-  border-color:#4f46e5;
-}
-.progress-box{
-background:#1e293b;
-padding:20px;
-border-radius:16px;
-margin-bottom:25px;
-border:1px solid #334155;
-}
-
-.progress-top{
-display:flex;
-justify-content:space-between;
-margin-bottom:12px;
-font-weight:600;
-}
-
-.progress-bar{
-height:12px;
-background:#334155;
-border-radius:50px;
-overflow:hidden;
-}
-
-#progressFill{
-height:100%;
-width:0%;
-background:#22c55e;
-transition:.4s;
-}
-/* ---------- Random Practice ---------- */
-
-.practice-box{
-  background:#1e293b;
-  border:1px solid #334155;
-  border-radius:18px;
-  padding:30px;
-  margin-bottom:30px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-}
-
-.practice-box h1{
-  font-size:56px;
-  margin:15px 0;
-}
-
-.practice-box h3{
-  color:#94a3b8;
-  margin-bottom:12px;
-}
-
-.practice-box p{
-  font-size:20px;
-  margin-bottom:25px;
-}
-
-.practice-box button{
-  margin-top:0;
-  margin-bottom:10px;
-}
-.search-bar{
-  width:100%;
-  padding:15px 18px;
-  border-radius:12px;
-  border:1px solid #334155;
-  background:#1e293b;
-  color:white;
-  font-size:16px;
-  margin-bottom:20px;
-  outline:none;
-  transition:.25s;
-}
-
-.search-bar::placeholder{
-  color:#94a3b8;
-}
-
-.search-bar:focus{
-  border-color:#4f46e5;
-  box-shadow:0 0 0 3px rgba(79,70,229,.25);
-}
-.practice-buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-/* ===========================
-   NIHON OS 2.0 - VOCABULARY
-=========================== */
-
-.top-section{
-    display:grid;
-    grid-template-columns:2fr 360px;
-    gap:25px;
-    align-items:start;
-    margin-bottom:30px;
-}
-
-.left-panel h2{
-    font-size:42px;
-    margin-bottom:8px;
-}
-
-.left-panel p{
-    color:#94a3b8;
-    margin-bottom:20px;
-}
-
-.progress-box{
-    background:linear-gradient(135deg,#312e81,#4f46e5);
-    padding:22px;
-    border-radius:18px;
-    border:none;
-    box-shadow:0 15px 35px rgba(79,70,229,.25);
-}
-
-.progress-top{
-    color:white;
-}
-
-.progress-bar{
-    margin-top:12px;
-    height:10px;
-    background:rgba(255,255,255,.25);
-}
-
-#progressFill{
-    background:#22c55e;
-}
-
-.practice-box{
-    height:320px;
-    padding:25px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-}
-
-}
-
-.practice-box h3{
-
-    color:white;
-
-    opacity:.9;
-
-}
-
-.practice-box h1{
-
-    font-size:56px;
-
-    margin:10px 0;
-
-}
-
-.practice-box p{
-
-    font-size:20px;
-
-    opacity:.95;
-
-    margin-bottom:20px;
-
-}
-
-.practice-buttons{
-
-    display:flex;
-
-    gap:10px;
-
-}
-
-.practice-buttons button{
+.main{
 
     flex:1;
 
-    background:white;
-
-    color:#4f46e5;
-
-    font-weight:600;
+    padding:40px;
 
 }
 
-.practice-buttons button:hover{
+.top-section{
 
-    background:#f8fafc;
+    display:grid;
 
-}
+    grid-template-columns:2fr 340px;
 
-.search-bar{
-
-    background:#1e293b;
-
-    border:2px solid transparent;
-
-    color:white;
-
-    transition:.3s;
-
-}
-
-.search-bar:focus{
-
-    border-color:#6366f1;
-
-    box-shadow:0 0 0 5px rgba(99,102,241,.18);
-
-}
-
-.filter-container{
-
-    display:flex;
-
-    gap:10px;
-
-    flex-wrap:wrap;
+    gap:25px;
 
     margin-bottom:30px;
 
 }
 
-.filter-btn{
+.left-panel h2{
 
-    background:#1e293b;
+    font-size:42px;
 
-    border:1px solid #334155;
-
-    transition:.3s;
+    margin-bottom:8px;
 
 }
 
-.filter-btn:hover{
+.left-panel p{
 
-    background:#6366f1;
+    color:var(--muted);
 
-}
-
-.word-card{
-
-    background:#1e293b;
-
-    border:none;
-
-    border-radius:20px;
-
-    padding:22px;
-
-    transition:.3s;
-
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
-
-}
-
-.word-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 18px 35px rgba(79,70,229,.25);
-
-}
-
-.word-card h2{
-
-    font-size:44px;
-
-    text-align:center;
-
-}
-
-.word-card h3{
-
-    text-align:center;
-
-    margin-bottom:18px;
-
-}
-
-.badge{
-
-    background:linear-gradient(135deg,#8b5cf6,#6366f1);
-
-}
-
-@media(max-width:1100px){
-
-.top-section{
-
-grid-template-columns:1fr;
-
-}
-
-.practice-box{
-
-position:relative;
-
-top:0;
-
-}
+    margin-bottom:20px;
 
 }
