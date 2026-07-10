@@ -3,6 +3,9 @@ const search = document.getElementById("search");
 
 let currentWords = [];
 
+let currentPracticeWord = null;
+let meaningVisible = true;
+
 if (typeof n5Words !== "undefined" && wordList) {
   currentWords = [...n5Words];
   displayWords(currentWords);
