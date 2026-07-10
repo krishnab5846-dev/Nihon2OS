@@ -70,11 +70,29 @@ function displayWords(words) {
 
         <h3>${word.reading}</h3>
 
-        <p><strong>Meaning:</strong> ${word.meaning}</p>
+       <p><strong>Meaning:</strong> ${word.meaning}</p>
 
-        <div class="badge">${word.type}</div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:15px;">
 
-      </div>
+<div class="badge">${word.type}</div>
+
+<button
+onclick="toggleLearned('${word.japanese}')"
+style="
+background:${getLearnedWords().includes(word.japanese) ? '#16a34a' : '#475569'};
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+font-size:13px;
+">
+
+${getLearnedWords().includes(word.japanese) ? '✅ Learned' : 'Mark as Learned'}
+
+</button>
+
+</div>
     `;
 
   });
