@@ -93,3 +93,20 @@ function displayWords(words) {
   });
 
 }
+function updateProgress() {
+
+  const learned = getLearnedWords().length;
+  const total = n5Words.length;
+
+  const percent = Math.round((learned / total) * 100);
+
+  document.getElementById("progressText").textContent =
+    `${learned} / ${total} Learned`;
+
+  document.getElementById("progressPercent").textContent =
+    `${percent}%`;
+
+  document.getElementById("progressFill").style.width =
+    `${percent}%`;
+
+}
