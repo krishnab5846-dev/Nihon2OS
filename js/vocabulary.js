@@ -41,6 +41,8 @@ function displayWords(words) {
 
   wordList.innerHTML = "";
 
+  updateProgress();
+  
   const favorites = getFavorites();
   const learnedWords = getLearnedWords();
 
