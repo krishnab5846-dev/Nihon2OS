@@ -112,3 +112,28 @@ function updateProgress() {
     `${percent}%`;
 
 }
+const randomBtn = document.getElementById("randomBtn");
+
+if (randomBtn) {
+
+  randomBtn.addEventListener("click", showRandomWord);
+
+  showRandomWord();
+
+}
+
+function showRandomWord() {
+
+  const random =
+    n5Words[Math.floor(Math.random() * n5Words.length)];
+
+  document.getElementById("practiceJapanese").textContent =
+    random.japanese;
+
+  document.getElementById("practiceReading").textContent =
+    random.reading;
+
+  document.getElementById("practiceMeaning").textContent =
+    random.meaning;
+
+}
