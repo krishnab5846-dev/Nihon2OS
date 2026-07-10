@@ -125,6 +125,33 @@ if (randomBtn) {
 
 }
 function showRandomWord() {
+const showMeaningBtn = document.getElementById("showMeaningBtn");
+
+if (showMeaningBtn) {
+
+  showMeaningBtn.addEventListener("click", () => {
+
+    if (!currentPracticeWord) return;
+
+    const meaning = document.getElementById("practiceMeaning");
+
+    if (meaningVisible) {
+
+      meaning.textContent = "••••••";
+      showMeaningBtn.textContent = "Show Meaning";
+      meaningVisible = false;
+
+    } else {
+
+      meaning.textContent = currentPracticeWord.meaning;
+      showMeaningBtn.textContent = "Hide Meaning";
+      meaningVisible = true;
+
+    }
+
+  });
+
+}
 
   let random;
 
