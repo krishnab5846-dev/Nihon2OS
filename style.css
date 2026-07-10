@@ -307,3 +307,9 @@ transition:.4s;
   margin-bottom:25px;
   outline:none;
 }
+.practice-buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
